@@ -1,0 +1,1 @@
+{"version":"V2","requestId":"cf2ffc88-6c8e-475d-9ec1-1f4fbbdde307","timestamp":1765183832019,"images":[{"uid":"8c27b326e20f48e088559c66c756c96e","name":"bizcard","inferResult":"ERROR","message":"Recognition failure.","validationResult":{"result":"NO_REQUESTED"},"convertedImageInfo":{"width":640,"height":480,"pageIndex":0,"longImage":false}}]}
