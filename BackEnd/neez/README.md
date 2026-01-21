@@ -1,9 +1,9 @@
-# 🪪 BBEY / Neez Backend  
+# BBEY / Neez Backend  
 > 명함 기반 기업정보 활용 회의록 자동화 AI 플랫폼
 
 ---
 
-## 🚀 Quickstart (VSCode)
+## Quickstart (VSCode)
 
 1. VSCode 확장 설치  
    - **Extension Pack for Java**  
@@ -20,7 +20,7 @@
 
 ---
 
-## 🧱 Build
+## Build
 
 ```bash
 ./mvnw spring-boot:run
@@ -29,7 +29,7 @@
 ```
 ---
 
-## 🗄️ Database Config
+## Database Config
 
 DB 연결 정보는 .env 또는 시스템 환경 변수에서 관리합니다.
 | Key       | 설명        |
@@ -49,12 +49,12 @@ DB 연결 정보는 .env 또는 시스템 환경 변수에서 관리합니다.
       password: ${DB_PASS}
   ```
   ```
-    ⚠️ 실제 application.yml에는 민감 정보가 포함되어 있으므로 GitHub에 업로드하지 않습니다.
+    실제 application.yml에는 민감 정보가 포함되어 있으므로 GitHub에 업로드하지 않습니다.
     
-    🖥  저장 위치: C:\Users\USER\Desktop\neez\BackEnd\neez\src\main\resources\application.yml
+    저장 위치: C:\Users\USER\Desktop\neez\BackEnd\neez\src\main\resources\application.yml
   ```
 
-## 🧩 Tech Stack
+## Tech Stack
 | 구분                  | 기술                             |
 | ------------------- | ------------------------------ |
 | **Backend**         | Spring Boot 2.7.12, MyBatis    |
@@ -64,7 +64,7 @@ DB 연결 정보는 .env 또는 시스템 환경 변수에서 관리합니다.
 | **Dependency 관리**   | Maven                          |
 | **Annotation**      | Lombok                         |
 
-## 🧾 Swagger UI
+## Swagger UI
 
 Swagger(OpenAPI)로 API 문서 확인 가능
 - URL: http://localhost:8083/swagger-ui/index.html
@@ -78,22 +78,22 @@ Swagger(OpenAPI)로 API 문서 확인 가능
   ```
 
 
-## 🔗 주요 API 요약
+## 주요 API 요약
 | 구분  | 메서드      | 경로                                     | 설명                  |
 | --- | -------- | -------------------------------------- | ------------------- |
-| 1️⃣ | `POST`   | `/api/bizcards/manual`                 | 명함 수기 등록            |
-| 2️⃣ | `POST`   | `/api/bizcards/read`                   | OCR로 등록 (파일명 기반)    |
-| 3️⃣ | `POST`   | `/api/bizcards/read/upload`            | 이미지 업로드 + OCR 등록    |
-| 4️⃣ | `GET`    | `/api/bizcards/user/{userIdx}/page`    | 사용자 명함 목록 조회        |
-| 5️⃣ | `GET`    | `/api/bizcards/{idx}`                  | 명함 상세 조회            |
-| 6️⃣ | `PATCH`  | `/api/bizcards/{idx}/memo`             | 메모만 수정              |
-| 7️⃣ | `PUT`    | `/api/bizcards/{idx}`                  | 명함 전체 수정            |
-| 8️⃣ | `DELETE` | `/api/bizcards/{idx}`                  | 명함 삭제 (Soft Delete) |
-| 9️⃣ | `PATCH`  | `/api/bizcards/{idx}/restore`          | 명함 복구               |
-| 🔟  | `GET`    | `/api/bizcards/user/{userIdx}/deleted` | 삭제된 명함(휴지통) 조회      |
+| 1️ | `POST`   | `/api/bizcards/manual`                 | 명함 수기 등록            |
+| 2️ | `POST`   | `/api/bizcards/read`                   | OCR로 등록 (파일명 기반)    |
+| 3️ | `POST`   | `/api/bizcards/read/upload`            | 이미지 업로드 + OCR 등록    |
+| 4️ | `GET`    | `/api/bizcards/user/{userIdx}/page`    | 사용자 명함 목록 조회        |
+| 5️ | `GET`    | `/api/bizcards/{idx}`                  | 명함 상세 조회            |
+| 6️ | `PATCH`  | `/api/bizcards/{idx}/memo`             | 메모만 수정              |
+| 7️ | `PUT`    | `/api/bizcards/{idx}`                  | 명함 전체 수정            |
+| 8️ | `DELETE` | `/api/bizcards/{idx}`                  | 명함 삭제 (Soft Delete) |
+| 9️ | `PATCH`  | `/api/bizcards/{idx}/restore`          | 명함 복구               |
+| 10 | `GET`    | `/api/bizcards/user/{userIdx}/deleted` | 삭제된 명함(휴지통) 조회      |
 
-## 💬 Example RequestBody
-### ✏️ 수기 등록 (/manual)
+## Example RequestBody
+### 수기 등록 (/manual)
 ```
 {
   "user_idx": 1,
@@ -110,7 +110,7 @@ Swagger(OpenAPI)로 API 문서 확인 가능
 }
 ```
 
-### 📸 OCR 등록 (/read)
+### OCR 등록 (/read)
 ```
 {
   "fileName": "biz1.jpg",
@@ -118,21 +118,21 @@ Swagger(OpenAPI)로 API 문서 확인 가능
 }
 ```
 
-### 📎 업로드 + OCR (/read/upload)
+### 업로드 + OCR (/read/upload)
 #### 폼데이터로 테스트:
 ```
 file: (명함 이미지 업로드)
 user_idx: 1
 ```
 
-#### 🧾 메모 수정 (/{id}/memo)
+#### 메모 수정 (/{id}/memo)
 ```
 {
   "memo": "회의 일정 조율 완료"
 }
 ```
 ---
-### ⚠️ 에러 응답 예시
+### 에러 응답 예시
 
 - 명함이 존재하지 않거나 ID가 잘못된 경우:
   ``` 
@@ -145,21 +145,21 @@ user_idx: 1
 
 ---
 
-## 🧪 테스트 시 권장 순서
+## 테스트 시 권장 순서
 
-1️⃣ POST /api/bizcards/manual → 명함 수기 등록
+1️ POST /api/bizcards/manual → 명함 수기 등록
 
-2️⃣ GET /api/bizcards/user/1/page → 사용자 명함 목록 조회
+2️ GET /api/bizcards/user/1/page → 사용자 명함 목록 조회
 
-3️⃣ GET /api/bizcards/{idx} → 명함 상세 확인
+3️ GET /api/bizcards/{idx} → 명함 상세 확인
 
-4️⃣ PATCH /api/bizcards/{idx}/memo → 메모 수정
+4️ PATCH /api/bizcards/{idx}/memo → 메모 수정
 
-5️⃣ PUT /api/bizcards/{idx} → 명함 정보 전체 수정
+5️ PUT /api/bizcards/{idx} → 명함 정보 전체 수정
 
-6️⃣ DELETE /api/bizcards/{idx} → 명함 삭제 (휴지통으로 이동)
+6️ DELETE /api/bizcards/{idx} → 명함 삭제 (휴지통으로 이동)
 
-7️⃣ PATCH /api/bizcards/{idx}/restore → 명함 복구
+7️ PATCH /api/bizcards/{idx}/restore → 명함 복구
 
 
 ---
